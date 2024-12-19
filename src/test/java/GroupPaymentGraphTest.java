@@ -40,7 +40,7 @@ public class GroupPaymentGraphTest {
         userList.add("A");
         userList.add("B");
         userList.add("C");
-        groups.put("123", new Group("Europe", "Euro trip", "www.interviewready.io",
+        groups.put("123", new Group("Europe", "Euro trip", "www.anandswaraj.com",
                 userList));
         return groups;
     }
@@ -52,18 +52,18 @@ public class GroupPaymentGraphTest {
         firstExpense.getBalances().put("B", new Amount(Currency.USD, 20));
         firstExpense.getBalances().put("C", new Amount(Currency.USD, -30));
         expenseService.addExpense(new Expense(firstExpense,
-                "outing1", "www.interviewready.io", "outing 1", "123"));
+                "outing1", "www.anandswaraj.com", "outing 1", "123"));
         final var secondExpense = new BalanceMap();
         secondExpense.getBalances().put("A", new Amount(Currency.USD, -50));
         secondExpense.getBalances().put("B", new Amount(Currency.USD, 10));
         secondExpense.getBalances().put("C", new Amount(Currency.USD, 40));
         expenseService.addExpense(new Expense(secondExpense,
-                "outing2", "www.interviewready.io", "outing 2", "123"));
+                "outing2", "www.anandswaraj.com", "outing 2", "123"));
         final var thirdExpense = new BalanceMap();
         thirdExpense.getBalances().put("A", new Amount(Currency.USD, 90));
         thirdExpense.getBalances().put("C", new Amount(Currency.USD, -90));
         expenseService.addExpense(new Expense(thirdExpense,
-                "outing3", "www.interviewready.io", "outing 3", "123"));
+                "outing3", "www.anandswaraj.com", "outing 3", "123"));
         return expenseService;
     }
 
@@ -77,7 +77,7 @@ public class GroupPaymentGraphTest {
         firstExpense.getBalances().put("E", new Amount(Currency.USD, -100));
         firstExpense.getBalances().put("F", new Amount(Currency.USD, 40));
         expenseService.addExpense(new Expense(firstExpense,
-                "outing1", "www.interviewready.io", "outing 1", "123"));
+                "outing1", "www.anandswaraj.com", "outing 1", "123"));
         return expenseService;
     }
 }
